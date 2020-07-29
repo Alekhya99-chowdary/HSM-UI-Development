@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=Login] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: x-large;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<script>
+function checkUP(){
+                var Username,Password;
+                Username=document.getElementById("Uname").value;
+                if(/^[A-Z][a-z]{4,8}$/.test(Username))
+                {
+                    window.alert('valid');
+                }
+                else{
+                    window.alert('invalid');
+                }
+                Password=document.getElementById("password").value;
+                if(/^[A-z][./!@#$%^&*()a-z0-9]*$/.test(Password))
+                {
+                    window.alert('valid');
+                }
+                else{
+                    window.alert('invalid');
+                }
+            }
+</script>
+<body>
+    <h3 style="text-align: center;">Medical Report</h3>
+    <div>
+        <form action="/action_page.php">
+          <label for="Uname">Username</label>
+          <input type="text" id="Uname" name="Username" placeholder="Enter Username">
+          <label for="Password">Password</label>
+          <input type="password" id="password" name="Password" placeholder="Enter Password">
+          <input type="Login" onclick="checkUP()"value="Login">
+        </form>
+      </div>
+</body>
+</html>
+        
+          
+
+
